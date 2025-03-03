@@ -4,37 +4,36 @@
   padding: 0;
 }
 
-header section .container {
+header {
+  margin: 0 auto 120px auto;
   max-width: 1440px;
-  margin: auto;
   height: 1084px;
-  background-size: cover;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), url("../img/banner.png") no-repeat center;
 }
-header section .container .navigation {
+header section.nav-banner .container .navigation {
   margin: 0 80px;
   padding-top: 41px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header section .container .navigation nav ul {
+header section.nav-banner .container .navigation nav ul {
   display: flex;
   gap: 64px;
 }
-header section .container .navigation nav ul li {
+header section.nav-banner .container .navigation nav ul li {
   position: relative;
 }
-header section .container .navigation nav ul li a {
+header section.nav-banner .container .navigation nav ul li a {
   font-weight: 400;
   font-size: 18px;
   color: #fff;
   text-decoration: none;
 }
-header section .container .navigation nav ul li a:hover {
+header section.nav-banner .container .navigation nav ul li a:hover {
   color: #e58411;
 }
-header section .container .navigation nav ul li a:before {
+header section.nav-banner .container .navigation nav ul li a:before {
   content: "";
   display: block;
   width: 0;
@@ -44,13 +43,13 @@ header section .container .navigation nav ul li a:before {
   bottom: -10px;
   transition: 0.4s;
 }
-header section .container .navigation nav ul li a:hover::before {
+header section.nav-banner .container .navigation nav ul li a:hover::before {
   width: 100%;
 }
-header section .container .navigation .cart {
+header section.nav-banner .container .navigation .cart {
   position: relative;
 }
-header section .container .navigation .cart:before {
+header section.nav-banner .container .navigation .cart:before {
   content: "0";
   text-align: center;
   display: flex;
@@ -65,19 +64,19 @@ header section .container .navigation .cart:before {
   border-radius: 100%;
   color: #ffffff;
 }
-header section .container .navigation .cart:hover::before {
+header section.nav-banner .container .navigation .cart:hover::before {
   background: #fff;
   color: #e58411;
 }
-header section .container .navigation .cart:hover svg path {
+header section.nav-banner .container .navigation .cart:hover svg path {
   fill: #e58411;
   transition: fill 0.4s;
 }
-header .banner {
+header section.banner {
   display: grid;
   place-items: center;
 }
-header .banner h1 {
+header section.banner h1 {
   margin: 0;
   padding-top: 92px;
   font-weight: 400;
@@ -89,7 +88,7 @@ header .banner h1 {
   color: #fff;
   white-space: nowrap;
 }
-header .banner h3 {
+header section.banner h3 {
   margin: 0;
   padding-top: 14px;
   font-weight: 400;
@@ -99,11 +98,11 @@ header .banner h3 {
   color: #fff;
   white-space: nowrap;
 }
-header .banner form {
+header section.banner form {
   padding-top: 45px;
   position: relative;
 }
-header .banner form input {
+header section.banner form input {
   border: 0.86px solid rgba(255, 255, 255, 0.6);
   border-radius: 42px;
   padding: 8px 8px 8px 20px;
@@ -116,7 +115,7 @@ header .banner form input {
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.15);
 }
-header .banner form button {
+header section.banner form button {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -130,11 +129,11 @@ header .banner form button {
   background: #e58411;
   border: none;
 }
-header .banner form button:hover {
+header section.banner form button:hover {
   transition: 0.4s;
   background: #fff;
 }
-header .banner form button:hover svg path {
+header section.banner form button:hover svg path {
   stroke: #e58411;
 }
 

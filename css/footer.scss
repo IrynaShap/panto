@@ -1,0 +1,104 @@
+footer {
+  background: #f7f7f7;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  section.info {
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 42px;
+      padding: 118px 188px 0 188px;
+
+      span {
+        margin-bottom: 118px;
+
+        h3 {
+          font-weight: 400;
+          font-size: 28px;
+          letter-spacing: 0.01em;
+          text-transform: capitalize;
+          color: #1e1e1e;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 160%;
+          color: #1e1e1e;
+          opacity: 0.8;
+        }
+      }
+
+      .services, .furniture, .follow-us {
+        h5 {
+          font-weight: 400;
+          font-size: 17px;
+          letter-spacing: -0.01em;
+          color: #f6973f;
+          margin-bottom: 20px;
+        }
+
+        ul {
+          li {
+            a {
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 160%;
+              color: #1e1e1e;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.copyright {
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 188px;
+
+      p {
+        margin-bottom: 58px;
+      }
+
+      .terms {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        p {
+          opacity: 0.5;
+          font-weight: 400;
+          font-size: 15px;
+          letter-spacing: -0.01em;
+          color: #1e2833;
+          margin-bottom: 58px;
+        }
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: #1e1e1e;
+        opacity: 0.8;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+}

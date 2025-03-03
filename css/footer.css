@@ -1,0 +1,80 @@
+footer {
+  background: #f7f7f7;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+footer section.info .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+  padding: 118px 188px 0 188px;
+}
+footer section.info .container span {
+  margin-bottom: 118px;
+}
+footer section.info .container span h3 {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+}
+footer section.info .container span p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #1e1e1e;
+  opacity: 0.8;
+}
+footer section.info .container .services h5, footer section.info .container .furniture h5, footer section.info .container .follow-us h5 {
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: #f6973f;
+  margin-bottom: 20px;
+}
+footer section.info .container .services ul li a, footer section.info .container .furniture ul li a, footer section.info .container .follow-us ul li a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+footer section.info .container .services ul li a:hover, footer section.info .container .furniture ul li a:hover, footer section.info .container .follow-us ul li a:hover {
+  text-decoration: underline;
+}
+footer section.copyright .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 188px;
+}
+footer section.copyright .container p {
+  margin-bottom: 58px;
+}
+footer section.copyright .container .terms {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+footer section.copyright .container .terms p {
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: #1e2833;
+  margin-bottom: 58px;
+}
+footer section.copyright .container a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #1e1e1e;
+  opacity: 0.8;
+  text-decoration: none;
+}
+footer section.copyright .container a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=footer.css.map */

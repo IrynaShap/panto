@@ -5,13 +5,14 @@
 }
 
 header {
-  section {
+  margin: 0 auto 120px auto;
+  max-width: 1440px;
+  height: 1084px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), url("../img/banner.png") no-repeat center;
+
+  section.nav-banner {
+
     .container {
-      max-width: 1440px;
-      margin: auto;
-      height: 1084px;
-      background-size: cover;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), url("../img/banner.png") no-repeat center;
 
       .navigation {
         margin: 0 80px;
@@ -85,12 +86,12 @@ header {
             fill: #e58411;
             transition: fill 0.4s;
           }
-      }
+        }
       }
     }
   }
 
-  .banner {
+  section.banner {
     display: grid;
     place-items: center;
 
