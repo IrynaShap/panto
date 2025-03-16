@@ -1,18 +1,20 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 header {
   margin: 0 auto 120px auto;
-  max-width: 1440px;
+  max-width: 100%;
   height: 1084px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), url("../img/banner.png") no-repeat center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), url(../img/banner.png) no-repeat center;
+  background-size: auto, cover;
+
+  @media only screen and (max-width: 1200px){
+    height: 775px;
+    margin: 0 auto 10px auto;
+  }
 
   section.nav-banner {
 
     .container {
+      max-width: 1440px;
+      margin: auto;
 
       .navigation {
         margin: 0 80px;
@@ -21,7 +23,12 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width: 1200px){
+          display: none;
+        }
+
         nav {
+
           ul {
             display: flex;
             gap: 64px;
@@ -30,6 +37,7 @@ header {
               position: relative;
 
               a {
+                font-family: 'Gilroy';
                 font-weight: 400;
                 font-size: 18px;
                 color: #fff;
@@ -96,6 +104,7 @@ header {
     place-items: center;
 
     h1 {
+      font-family: 'Gilroy';
       margin: 0;
       padding-top: 92px;
       font-weight: 400;
@@ -106,9 +115,18 @@ header {
       text-align: center;
       color: #fff;
       white-space: nowrap;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 45px;
+      }
+
+      @media only screen and (max-width: 768px){
+        font-size: 30px;
+      }
     }
 
     h3 {
+      font-family: 'Gilroy';
       margin: 0;
       padding-top: 14px;
       font-weight: 400;
@@ -117,6 +135,14 @@ header {
       text-align: center;
       color: #fff;
       white-space: nowrap;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 14px;
+      }
+
+      @media only screen and (max-width: 768px){
+        font-size: 12px;
+      }
     }
 
     form {
@@ -124,6 +150,7 @@ header {
       position: relative;
 
       input {
+        font-family: 'Gilroy';
         border: 0.86px solid rgba(255, 255, 255, 0.6);
         border-radius: 42px;
         padding: 8px 8px 8px 20px;
@@ -135,6 +162,10 @@ header {
         color: #fff;
         backdrop-filter: blur(8px);
         background: rgba(255, 255, 255, 0.15);
+
+        @media only screen and (max-width: 1200px) {
+          width: 276px;
+        }
       }
 
       button {
@@ -150,6 +181,10 @@ header {
         height: 40px;
         background: #e58411;
         border: none;
+
+        @media only screen and (max-width: 1200px) {
+          left: 230px;
+        }
 
         &:hover {
           transition: 0.4s;

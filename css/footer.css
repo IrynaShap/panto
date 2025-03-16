@@ -1,18 +1,30 @@
 footer {
   background: #f7f7f7;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 footer section.info .container {
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   gap: 42px;
   padding: 118px 188px 0 188px;
 }
+@media only screen and (max-width: 1200px) {
+  footer section.info .container {
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer section.info .container {
+    display: block;
+  }
+}
 footer section.info .container span {
   margin-bottom: 118px;
 }
 footer section.info .container span h3 {
+  font-family: "Gilroy";
   font-weight: 400;
   font-size: 28px;
   letter-spacing: 0.01em;
@@ -20,7 +32,14 @@ footer section.info .container span h3 {
   color: #1e1e1e;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 768px) {
+  footer section.info .container span h3 {
+    display: block;
+    overflow-y: hidden;
+  }
+}
 footer section.info .container span p {
+  font-family: "Gilroy";
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
@@ -28,13 +47,26 @@ footer section.info .container span p {
   opacity: 0.8;
 }
 footer section.info .container .services h5, footer section.info .container .furniture h5, footer section.info .container .follow-us h5 {
+  font-family: "Gilroy";
   font-weight: 400;
   font-size: 17px;
   letter-spacing: -0.01em;
   color: #f6973f;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  footer section.info .container .services h5, footer section.info .container .furniture h5, footer section.info .container .follow-us h5 {
+    display: block;
+    overflow-y: hidden;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+footer section.info .container .services ul li, footer section.info .container .furniture ul li, footer section.info .container .follow-us ul li {
+  padding: 10px 0;
+}
 footer section.info .container .services ul li a, footer section.info .container .furniture ul li a, footer section.info .container .follow-us ul li a {
+  font-family: "Gilroy";
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
@@ -44,20 +76,61 @@ footer section.info .container .services ul li a, footer section.info .container
 footer section.info .container .services ul li a:hover, footer section.info .container .furniture ul li a:hover, footer section.info .container .follow-us ul li a:hover {
   text-decoration: underline;
 }
+footer section.info .container .services ul.social li a.facebook, footer section.info .container .furniture ul.social li a.facebook, footer section.info .container .follow-us ul.social li a.facebook {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+footer section.info .container .services ul.social li a.facebook:before, footer section.info .container .furniture ul.social li a.facebook:before, footer section.info .container .follow-us ul.social li a.facebook:before {
+  content: "";
+  background-image: url("../img/facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+footer section.info .container .services ul.social li a.twitter, footer section.info .container .furniture ul.social li a.twitter, footer section.info .container .follow-us ul.social li a.twitter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer section.info .container .services ul.social li a.twitter:before, footer section.info .container .furniture ul.social li a.twitter:before, footer section.info .container .follow-us ul.social li a.twitter:before {
+  content: "";
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+footer section.info .container .services ul.social li a.instagram, footer section.info .container .furniture ul.social li a.instagram, footer section.info .container .follow-us ul.social li a.instagram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer section.info .container .services ul.social li a.instagram:before, footer section.info .container .furniture ul.social li a.instagram:before, footer section.info .container .follow-us ul.social li a.instagram:before {
+  content: "";
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
 footer section.copyright .container {
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 0 188px;
 }
+@media only screen and (max-width: 1200px) {
+  footer section.copyright .container {
+    display: flex;
+    padding: 30px;
+    flex-direction: column-reverse;
+  }
+}
 footer section.copyright .container p {
-  margin-bottom: 58px;
-}
-footer section.copyright .container .terms {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-footer section.copyright .container .terms p {
+  font-family: "Gilroy";
   opacity: 0.5;
   font-weight: 400;
   font-size: 15px;
@@ -65,7 +138,20 @@ footer section.copyright .container .terms p {
   color: #1e2833;
   margin-bottom: 58px;
 }
-footer section.copyright .container a {
+@media only screen and (max-width: 1200px) {
+  footer section.copyright .container p {
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+  }
+}
+footer section.copyright .container .terms {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+footer section.copyright .container .terms a {
+  font-family: "Gilroy";
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
@@ -73,7 +159,7 @@ footer section.copyright .container a {
   opacity: 0.8;
   text-decoration: none;
 }
-footer section.copyright .container a:hover {
+footer section.copyright .container .terms a:hover {
   text-decoration: underline;
 }
 

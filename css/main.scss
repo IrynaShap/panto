@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 #xcontent-1:target ~ .tab-nav > [href="#content-1"],
 #xcontent-2:target ~ .tab-nav > [href="#content-2"],
 #xcontent-3:target ~ .tab-nav > [href="#content-3"] {
@@ -15,43 +9,79 @@
 main {
 
   section.choosing-us {
-    max-width: 1440px;
-    margin: auto;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 120px;
+
+    @media only screen and (max-width: 1200px) {
+      margin-bottom: 0;
+    }
 
     .container {
-      margin-bottom: 120px;
+      max-width: 1440px;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: auto;
+      gap: 30px;
+      padding: 0 80px;
+
+      @media only screen and (max-width: 1200px) {
+        display: block;
+      }
+
+      @media only screen and (max-width: 768px){
+        padding: 0 20px;
+      }
 
       h3 {
+        font-family: 'Gilroy';
         font-weight: 400;
         font-size: 42px;
         color: #1e1e1e;
         white-space: nowrap;
-        padding: 0 80px;
+        padding: 0 130px 0 0;
+
+        @media only screen and (max-width: 1200px) {
+          margin-bottom: 30px;
+        }
+
+        @media only screen and (max-width: 768px){
+          padding: 25px 0;
+        }
       }
 
       .choosing-us__content {
 
         h4 {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 24px;
           color: #1e1e1e;
           opacity: 0.9;
           margin-bottom: 18px;
+
+          @media only screen and (max-width: 768px){
+            padding: 4px 0;
+          }
         }
 
         p {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 16px;
           line-height: 185%;
           color: #1e1e1e;
           opacity: 0.8;
           margin-bottom: 14px;
+
+          @media only screen and (max-width: 1200px) {
+            margin-bottom: 10px;
+          }
         }
 
         a {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 14px;
           line-height: 185%;
@@ -64,6 +94,10 @@ main {
           gap: 14px;
           white-space: nowrap;
           text-decoration: none;
+
+          @media only screen and (max-width: 1200px) {
+            margin-bottom: 40px;
+          }
 
           &:after {
             content: '';
@@ -83,14 +117,16 @@ main {
   }
 
   section.best-selling {
-    max-width: 1440px;
-    margin: 0 auto 120px auto;
+    max-width: 100%;
     background: #f7f7f7;
+    margin-bottom: 20px;
 
     .container {
-      margin-bottom: 0;
+      max-width: 1440px;
+      margin: auto;
 
       h3 {
+        font-family: 'Gilroy';
         text-align: center;
         font-weight: 400;
         font-size: 42px;
@@ -98,10 +134,17 @@ main {
         white-space: nowrap;
         padding-top: 50px;
         margin-bottom: 32px;
+
+        @media only screen and (max-width: 1200px) {
+          margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 768px){
+          font-size: 34px;
+        }
       }
 
       .tab {
-
         display: flex;
         flex-direction: column;
 
@@ -117,6 +160,10 @@ main {
           height: 57px;
           margin: 0 auto 80px auto;
 
+          @media only screen and (max-width: 1200px) {
+            max-width: 260px;
+          }
+
           a.active {
             background-color: #fff !important;
             color: #1e1e1e !important;
@@ -124,6 +171,7 @@ main {
           }
 
           a.tab-link {
+            font-family: 'Gilroy';
             text-align: center;
             border-radius: 32px;
             padding: 4px;
@@ -160,7 +208,6 @@ main {
 
         .owl-stage-outer {
 
-
           .owl-stage {
             .owl-item {
               display: flex;
@@ -169,22 +216,94 @@ main {
           }
         }
 
-        .best-selling___item {
+        .owl-nav {
 
+          .owl-prev {
+            position: absolute;
+            box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+            background: #fff;
+            transform: rotate(-180deg);
+            border-radius: 26px;
+            padding: 11px;
+            width: 50px;
+            height: 50px;
+            right: 62px;
+            bottom: 185px;
+
+            &:before {
+              content: '';
+              background-image: url("../img/icons_form-next-prev.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              display: block;
+              width: 48px;
+              height: 26px;
+            }
+
+            &:hover {
+              transform: scale(1.1) rotate(-180deg);
+              transition: transform 0.3s ease;
+            }
+
+            span {
+              display: none;
+            }
+          }
+
+          .owl-next {
+            position: absolute;
+            left: 55px;
+            bottom: 185px;
+            box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+            background: #fff;
+            border-radius: 26px;
+            padding: 11px;
+            width: 50px;
+            height: 50px;
+
+            &:before {
+              content: '';
+              background-image: url("../img/icons_form-next-prev.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              display: block;
+              width: 48px;
+              height: 26px;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.3s ease;
+            }
+
+            span {
+              display: none;
+            }
+          }
+        }
+
+        .best-selling___item {
           border-radius: 20px;
           background-color: #fff;
           max-width: 217px;
 
           img {
             margin-bottom: 14px;
-
             display: inline-block;
             background-color: #fafafa;
             max-width: 217px;
             max-height: 255px;
           }
 
+          img.stars {
+            background-color: transparent;
+            max-width: 103px;
+            max-height: 19px;
+            padding-left: 22px;
+          }
+
           h5 {
+            font-family: 'Gilroy';
             padding-left: 22px;
             margin-bottom: 6px;
             font-weight: 400;
@@ -193,6 +312,7 @@ main {
           }
 
           h4 {
+            font-family: 'Gilroy';
             padding-left: 22px;
             margin-bottom: 6px;
             font-weight: 600;
@@ -209,35 +329,51 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            position: relative;
             padding: 0 21px 20px 21px;
 
             p {
+              padding-left: 12px;
+              font-family: 'Gilroy';
               font-weight: 600;
-              font-size: 15px;
+              font-size: 21px;
               color: #0d1b39;
 
+              @media only screen and (max-width: 768px){
+                padding-bottom: 1px;
+              }
 
               span {
+                position: absolute;
                 font-weight: 600;
-                font-size: 21px;
+                font-size: 15px;
                 color: #0d1b39;
+                left: 21px;
+
+                @media only screen and (max-width: 768px){
+                  padding: 1px 0;
+                }
               }
             }
 
             a.plus {
-              position: relative;
+              font-family: 'Gilroy';
               border-radius: 31px;
-              padding: 12px;
               width: 48px;
               height: 48px;
               background: #0d1b39;
+              color: #fff;
+              text-align: center;
+              text-decoration: none;
+              font-size: 50px;
 
-              svg {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+              &:hover {
+                background: #e58411;
+                transition: 0.4s;
+              }
+
+              @media only screen and (max-width: 768px){
+                overflow-y: hidden;
               }
             }
           }
@@ -245,6 +381,7 @@ main {
       }
 
       a.view-all {
+        font-family: 'Gilroy';
         margin: 0 auto;
         padding-bottom: 50px;
         display: flex;
@@ -272,6 +409,11 @@ main {
         &:hover {
           text-decoration: underline;
         }
+
+        @media only screen and (max-width: 768px){
+          margin-bottom: 16px;
+          padding: 0;
+        }
       }
 
     }
@@ -281,10 +423,24 @@ main {
     max-width: 1440px;
     margin: 0 auto 120px auto;
 
+    @media only screen and (max-width: 1200px) {
+      margin: 0 auto 60px auto;
+    }
+
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: 1200px) {
+        justify-content: space-around;
+        flex-direction: column;
+      }
+
+      @media only screen and (max-width: 768px){
+        flex-direction: unset;
+      }
 
       img {
         max-width: 728px;
@@ -292,9 +448,10 @@ main {
       }
 
       .experiences-content {
-        margin-right: 141px;
+
 
         h4 {
+          font-family: 'Gilroy';
           margin-bottom: 20px;
           font-weight: 400;
           font-size: 18px;
@@ -302,27 +459,44 @@ main {
           text-transform: uppercase;
           color: #e58411;
           white-space: nowrap;
+
+          @media only screen and (max-width: 768px){
+            font-size: 14px;
+            overflow-y: hidden;
+          }
         }
 
         h2 {
+          font-family: 'Gilroy';
           white-space: nowrap;
           margin-bottom: 20px;
           font-weight: 400;
           font-size: 42px;
           text-transform: capitalize;
           color: #1e1e1e;
+
+          @media only screen and (max-width: 768px){
+            font-size: 27px;
+            overflow-y: hidden;
+          }
         }
 
         p {
+          font-family: 'Gilroy';
           white-space: nowrap;
           margin-bottom: 24px;
           font-weight: 400;
           font-size: 18px;
           line-height: 185%;
           color: #1e1e1e;
+
+          @media only screen and (max-width: 768px){
+            font-size: 12px;
+          }
         }
 
         a {
+          font-family: 'Gilroy';
           text-decoration: none;
           font-weight: 400;
           font-size: 14px;
@@ -361,6 +535,16 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: 1200px) {
+        justify-content: space-around;
+        flex-direction: column-reverse;
+      }
+
+      @media only screen and (max-width: 768px){
+        flex-direction: unset;
+      }
 
       img {
         max-width: 932px;
@@ -368,9 +552,10 @@ main {
       }
 
       .materials-content {
-        margin-right: 141px;
+
 
         h4 {
+          font-family: 'Gilroy';
           white-space: nowrap;
           margin-bottom: 20px;
           font-weight: 400;
@@ -378,27 +563,44 @@ main {
           letter-spacing: 0.17em;
           text-transform: uppercase;
           color: #e58411;
+
+          @media only screen and (max-width: 768px){
+            font-size: 14px;
+            overflow-y: hidden;
+          }
         }
 
         h2 {
+          font-family: 'Gilroy';
           white-space: nowrap;
           margin-bottom: 20px;
           font-weight: 400;
           font-size: 42px;
           text-transform: capitalize;
           color: #1e1e1e;
+
+          @media only screen and (max-width: 768px){
+            font-size: 27px;
+            overflow-y: hidden;
+          }
         }
 
         p {
+          font-family: 'Gilroy';
           white-space: nowrap;
           margin-bottom: 24px;
           font-weight: 400;
           font-size: 18px;
           line-height: 185%;
           color: #1e1e1e;
+
+          @media only screen and (max-width: 768px){
+            font-size: 12px;
+          }
         }
 
         a {
+          font-family: 'Gilroy';
           text-decoration: none;
           font-weight: 400;
           font-size: 14px;
@@ -424,6 +626,10 @@ main {
           &:hover {
             text-decoration: underline;
           }
+
+            @media only screen and (max-width: 768px){
+                margin-bottom: 25px;
+            }
         }
       }
     }
@@ -436,6 +642,7 @@ main {
     .container {
 
       h4 {
+        font-family: 'Gilroy';
         white-space: nowrap;
         font-weight: 400;
         font-size: 18px;
@@ -447,6 +654,7 @@ main {
       }
 
       h2 {
+        font-family: 'Gilroy';
         white-space: nowrap;
         font-weight: 400;
         font-size: 42px;
@@ -457,19 +665,80 @@ main {
       }
 
       .testimonials__content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-
 
         .owl-stage-outer {
-
 
           .owl-stage {
             .owl-item {
               display: flex;
               justify-content: center;
+            }
+          }
+        }
+
+        .owl-nav {
+
+          .owl-prev {
+            position: absolute;
+            box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+            background: #fff;
+
+            border-radius: 26px;
+            padding: 11px;
+            width: 50px;
+            height: 50px;
+            left: 47px;
+            top: 136px;
+
+            &:before {
+              content: '';
+              background-image: url("../img/icons_form-next-prev.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              display: block;
+              width: 48px;
+              height: 26px;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.3s ease;
+            }
+
+            span {
+              display: none;
+            }
+          }
+
+          .owl-next {
+            transform: rotate(-180deg);
+            position: absolute;
+            right: 47px;
+            top: 136px;
+            box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+            background: #fff;
+            border-radius: 26px;
+            padding: 11px;
+            width: 50px;
+            height: 50px;
+
+            &:before {
+              content: '';
+              background-image: url("../img/icons_form-next-prev.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              display: block;
+              width: 48px;
+              height: 26px;
+            }
+
+            &:hover {
+              transform: scale(1.1) rotate(-180deg);
+              transition: transform 0.3s ease;
+            }
+
+            span {
+              display: none;
             }
           }
         }
@@ -485,11 +754,8 @@ main {
 
           img.reviews {
             position: absolute;
-            bottom: 100px;
-            left: 16px;
-            border-radius: 18px;
-            max-width: 334px;
-            max-height: 206px;
+            bottom: 88px;
+            padding: 0 30px;
           }
 
           img.reviewer {
@@ -502,12 +768,10 @@ main {
 
           article {
             position: absolute;
-            bottom: 122px;
-            left: 75px;
-
+            bottom: 126px;
 
             h3 {
-
+              font-family: 'Gilroy';
               font-weight: 400;
               font-size: 18px;
               text-transform: capitalize;
@@ -518,6 +782,7 @@ main {
             }
 
             h5 {
+              font-family: 'Gilroy';
               font-weight: 400;
               font-size: 12px;
               text-align: center;
@@ -527,15 +792,16 @@ main {
             }
 
             p {
+              font-family: 'Gilroy';
               margin-bottom: 10px;
               font-weight: 400;
               font-size: 14px;
               text-align: center;
               color: #1e1e1e;
-              white-space: nowrap;
+              padding: 0 50px;
             }
 
-            img{
+            img {
               width: 90px;
               height: 14px;
               margin: 0 auto;

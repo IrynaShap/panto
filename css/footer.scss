@@ -1,29 +1,45 @@
 footer {
   background: #f7f7f7;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 100%;
 
   section.info {
 
     .container {
+      max-width: 1440px;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       gap: 42px;
       padding: 118px 188px 0 188px;
 
+      @media only screen and (max-width: 1200px) {
+        padding: 40px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+
       span {
         margin-bottom: 118px;
 
         h3 {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 28px;
           letter-spacing: 0.01em;
           text-transform: capitalize;
           color: #1e1e1e;
           margin-bottom: 10px;
+
+          @media only screen and (max-width: 768px) {
+            display: block;
+            overflow-y: hidden;
+          }
         }
 
         p {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 15px;
           line-height: 160%;
@@ -34,16 +50,27 @@ footer {
 
       .services, .furniture, .follow-us {
         h5 {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 17px;
           letter-spacing: -0.01em;
           color: #f6973f;
           margin-bottom: 20px;
+
+          @media only screen and (max-width: 768px) {
+            display: block;
+            overflow-y: hidden;
+            padding-top: 20px;
+            margin-bottom: 10px;
+          }
         }
 
         ul {
           li {
+            padding: 10px 0;
+
             a {
+              font-family: 'Gilroy';
               font-weight: 400;
               font-size: 15px;
               line-height: 160%;
@@ -56,6 +83,57 @@ footer {
             }
           }
         }
+
+        ul.social {
+
+          li {
+
+            a.facebook {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+
+              &:before {
+                content: '';
+                background-image: url('../img/facebook.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            a.twitter {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              &:before {
+                content: '';
+                background-image: url('../img/twitter.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            a.instagram {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              &:before {
+                content: '';
+                background-image: url('../img/instagram.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -63,12 +141,32 @@ footer {
   section.copyright {
 
     .container {
+      max-width: 1440px;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       padding: 0 188px;
 
+      @media only screen and (max-width: 1200px) {
+        display: flex;
+        padding: 30px;
+        flex-direction: column-reverse;
+      }
+
       p {
+        font-family: 'Gilroy';
+        opacity: 0.5;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.01em;
+        color: #1e2833;
         margin-bottom: 58px;
+
+        @media only screen and (max-width: 1200px) {
+          text-align: center;
+          padding: 30px;
+          margin: 0;
+        }
       }
 
       .terms {
@@ -76,29 +174,20 @@ footer {
         justify-content: space-between;
         gap: 40px;
 
-        p {
-          opacity: 0.5;
+        a {
+          font-family: 'Gilroy';
           font-weight: 400;
           font-size: 15px;
-          letter-spacing: -0.01em;
-          color: #1e2833;
-          margin-bottom: 58px;
+          line-height: 160%;
+          color: #1e1e1e;
+          opacity: 0.8;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
-
-      a {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        color: #1e1e1e;
-        opacity: 0.8;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
     }
   }
 }
